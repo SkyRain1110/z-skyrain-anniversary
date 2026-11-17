@@ -1,0 +1,12 @@
+# Cloudflare Pages 配置
+# 部署命令：npx wrangler pages deploy . --project-name=zsky-anniversary
+name = "zsky-anniversary"
+compatibility_date = "2025-09-01"
+pages_build_output_dir = "."
+
+# 先用 `npx wrangler d1 create zsky-messages` 创建数据库，
+# 再把返回的 database_id 填到下面（或在 Pages 控制台手动绑定 DB）。
+[[d1_databases]]
+binding = "DB"
+database_name = "zsky-messages"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"

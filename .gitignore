@@ -1,0 +1,8 @@
+# 只保留在本地、不进入 GitHub 的内容
+_perf/
+_verify/
+_build/
+图片/
+preview/
+read_me.txt
+.DS_Store

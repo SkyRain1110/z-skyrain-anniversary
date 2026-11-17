@@ -1,0 +1,11 @@
+# 这些文件只用于本地编辑 / 部署，不需要上传成静态资源
+_build/
+preview/
+图片/
+read_me.txt
+README.md
+schema.sql
+wrangler.toml
+.git/
+.gitignore
+node_modules/
