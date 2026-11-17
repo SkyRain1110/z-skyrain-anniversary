@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1b120c">
+  <title>Z和Skyrain的纪念网页</title>
+  <meta name="description" content="Z 和 Skyrain 的一周年纪念像素小世界 —— 校碑、夜路与河畔。">
+  <link rel="icon" href="assets/ui/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/zpix.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/scene-gate.webp" as="image">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- ================= 封面 ================= -->
+    <section class="cover" id="cover" aria-label="封面">
+      <div class="cover-bg" aria-hidden="true">
+        <img src="assets/img/scene-gate.webp" alt="">
+      </div>
+      <div class="cover-tint" aria-hidden="true"></div>
+      <div class="cover-petals" aria-hidden="true">
+        <i style="--x:6%;--d:15s;--s:5px;--delay:-3s"></i>
+        <i style="--x:19%;--d:19s;--s:4px;--delay:-11s"></i>
+        <i style="--x:34%;--d:16s;--s:6px;--delay:-7s"></i>
+        <i style="--x:52%;--d:21s;--s:4px;--delay:-14s"></i>
+        <i style="--x:68%;--d:17s;--s:5px;--delay:-5s"></i>
+        <i style="--x:81%;--d:20s;--s:4px;--delay:-16s"></i>
+        <i style="--x:93%;--d:14s;--s:6px;--delay:-9s"></i>
+      </div>
+
+      <div class="cover-inner">
+        <p class="cover-kicker">★ HAPPY 1ST ANNIVERSARY ★</p>
+
+        <div class="sign">
+          <div class="sign-board">
+            <p class="sign-date">2025.11.19 &nbsp;—&nbsp; 2026.11.19</p>
+            <h1 class="sign-title">Z和Skyrain<br>的纪念网页</h1>
+            <div class="sign-rule" aria-hidden="true"><i></i><b>♥</b><i></i></div>
+            <p class="sign-sub">一 周 年 快 乐</p>
+          </div>
+        </div>
+
+        <button class="start-btn" id="startBtn" type="button" aria-label="开始浏览纪念网页">
+          <span class="start-arrow" aria-hidden="true">▶</span>
+          <span class="start-text">START<small>开 始</small></span>
+        </button>
+
+        <p class="cover-hint">建议竖屏观看 · 左右滑动切换场景</p>
+      </div>
+
+      <div class="cover-cast" aria-hidden="true">
+        <img class="cover-char cover-boy" src="assets/img/boy.webp" alt="">
+        <img class="cover-char cover-kuromi" src="assets/img/kuromi.webp" alt="">
+      </div>
+
+      <p class="cover-foot">MADE FOR Z &amp; SKYRAIN</p>
+    </section>
+
+    <!-- ================= 主场景 ================= -->
+    <main class="stage" id="stage" aria-label="纪念场景">
+
+      <div class="scenes" id="scenes">
+
+        <!-- 场景一：校碑 -->
+        <section class="scene" data-scene="1" data-no="01" data-caption="校碑初见" aria-label="场景一 校碑初见">
+          <div class="scene-bg"><img src="assets/img/scene-gate.webp" alt="深圳中学校门前" draggable="false"></div>
+          <div class="scene-shade"></div>
+
+          <div class="cast">
+            <figure class="char char-boy">
+              <img src="assets/img/boy.webp" alt="Skyrain" draggable="false">
+            </figure>
+            <figure class="char char-kuromi">
+              <img src="assets/img/kuromi.webp" alt="Z" draggable="false">
+            </figure>
+          </div>
+        </section>
+
+        <!-- 场景二：夜路表白 -->
+        <section class="scene" data-scene="2" data-no="02" data-caption="夜路表白" aria-label="场景二 夜路表白">
+          <div class="scene-bg"><img src="assets/img/scene-date.webp" alt="夜晚的校园小路" draggable="false"></div>
+          <div class="scene-shade"></div>
+          <div class="fireflies" aria-hidden="true">
+            <i style="--x:14%;--y:38%;--d:4.5s;--delay:-1s"></i>
+            <i style="--x:27%;--y:52%;--d:6s;--delay:-3s"></i>
+            <i style="--x:41%;--y:33%;--d:5s;--delay:-2s"></i>
+            <i style="--x:63%;--y:47%;--d:7s;--delay:-4s"></i>
+            <i style="--x:76%;--y:36%;--d:5.5s;--delay:-.5s"></i>
+            <i style="--x:88%;--y:55%;--d:6.5s;--delay:-5s"></i>
+          </div>
+
+          <div class="cast">
+            <figure class="char char-boy">
+              <img src="assets/img/boy.webp" alt="Skyrain" draggable="false">
+            </figure>
+            <figure class="char char-kuromi">
+              <img src="assets/img/kuromi.webp" alt="Z" draggable="false">
+            </figure>
+          </div>
+
+          <div class="dialogues" aria-live="polite">
+            <div class="dialogue-group is-active">
+              <div class="bubble bubble-yuta">
+                <span class="bubble-name name-yuta">Skyrain</span>
+                <p>我也挺喜欢你的💗</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+              <div class="bubble bubble-kuromi">
+                <span class="bubble-name name-kuromi">Z</span>
+                <p>我其实喜欢你💗。</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 场景三：河畔散步 -->
+        <section class="scene" data-scene="3" data-no="03" data-caption="河畔散步" aria-label="场景三 河畔散步">
+          <div class="scene-bg"><img src="assets/img/scene-river.webp" alt="河边的草坡与树" draggable="false"></div>
+          <div class="scene-shade"></div>
+          <div class="petals" aria-hidden="true">
+            <i style="--x:8%;--d:13s;--s:5px;--delay:-2s"></i>
+            <i style="--x:21%;--d:17s;--s:4px;--delay:-9s"></i>
+            <i style="--x:37%;--d:15s;--s:6px;--delay:-5s"></i>
+            <i style="--x:56%;--d:19s;--s:4px;--delay:-13s"></i>
+            <i style="--x:72%;--d:14s;--s:5px;--delay:-6s"></i>
+            <i style="--x:89%;--d:18s;--s:4px;--delay:-11s"></i>
+          </div>
+
+          <div class="cast">
+            <figure class="char char-boy">
+              <img src="assets/img/boy.webp" alt="Skyrain" draggable="false">
+              <button class="prop prop-sword" id="swordProp" type="button" aria-label="看看 Skyrain 手里的扭扭棒桃花剑">
+                <img src="assets/img/sword.webp" alt="" aria-hidden="true" draggable="false">
+                <span class="prop-ping" aria-hidden="true">!</span>
+              </button>
+            </figure>
+            <figure class="char char-kuromi">
+              <img src="assets/img/kuromi.webp" alt="Z" draggable="false">
+              <button class="prop prop-letter" id="letterProp" type="button" aria-label="看看 Z 手里的诗信">
+                <img src="assets/ui/envelope.png" alt="" aria-hidden="true" draggable="false">
+                <span class="prop-ping" aria-hidden="true">!</span>
+              </button>
+            </figure>
+          </div>
+
+          <div class="dialogues" aria-live="polite">
+            <div class="dialogue-group is-active" data-group="0">
+              <div class="bubble bubble-yuta">
+                <span class="bubble-name name-yuta">Skyrain</span>
+                <p>一定会的！</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+              <div class="bubble bubble-kuromi">
+                <span class="bubble-name name-kuromi">Z</span>
+                <p>我希望我们能走到最后</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="dialogue-group" data-group="1">
+              <div class="bubble bubble-yuta">
+                <span class="bubble-name name-yuta">Skyrain</span>
+                <p>我可以握你的手吗？</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+              <div class="bubble bubble-kuromi">
+                <span class="bubble-name name-kuromi">Z</span>
+                <p>等没人了我们再握</p>
+                <span class="tail" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 顶部 HUD -->
+      <header class="hud">
+        <div class="day-badge" title="从 2025 年 11 月 19 日开始计算">
+          <img class="day-heart" src="assets/ui/heart.png" alt="" aria-hidden="true">
+          <span class="day-copy">
+            <span class="day-label">在一起</span>
+            <span class="day-value">第 <b id="dayNum">1</b> 天</span>
+          </span>
+        </div>
+
+        <div class="hud-actions">
+          <button class="icon-btn" id="soundBtn" type="button" aria-label="关闭声音" aria-pressed="true" title="声音开关">
+            <svg class="ico ico-sound" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
+              <path d="M2 6h3l4-3v10l-4-3H2z" fill="currentColor"/>
+              <path d="M11 5v6M13.5 3v10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <svg class="ico ico-mute" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
+              <path d="M2 6h3l4-3v10l-4-3H2z" fill="currentColor"/>
+              <path d="M11 5l4 6M15 5l-4 6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </button>
+          <button class="icon-btn" id="boardBtn" type="button" aria-label="打开留言板" title="留言板">
+            <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
+              <rect x="1.5" y="3.5" width="13" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 4l6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="scene-caption" id="sceneCaption">
+        <span class="cap-dot" aria-hidden="true"></span>
+        <span id="captionText">01 · 校碑初见</span>
+        <span class="cap-dot" aria-hidden="true"></span>
+      </div>
+
+      <button class="nav-btn nav-prev" id="prevBtn" type="button" aria-label="上一个场景">
+        <svg viewBox="0 0 12 18" shape-rendering="crispEdges" aria-hidden="true">
+          <path d="M10 1L2 9l8 8v-4L6 9l4-4z" fill="currentColor"/>
+        </svg>
+      </button>
+      <button class="nav-btn nav-next" id="nextBtn" type="button" aria-label="下一个场景">
+        <svg viewBox="0 0 12 18" shape-rendering="crispEdges" aria-hidden="true">
+          <path d="M2 1l8 8-8 8v-4l4-4-4-4z" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <footer class="stage-foot">
+        <div class="dots" id="dots" aria-hidden="true">
+          <span class="dot is-on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <p class="swipe-hint">左右滑动 · 切换场景</p>
+      </footer>
+
+    </main>
+
+    <!-- ================= 留言板 ================= -->
+    <div class="sheet" id="boardSheet" hidden>
+      <div class="sheet-backdrop" data-close-board></div>
+      <section class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="boardTitle">
+        <header class="sheet-head">
+          <div>
+            <p class="sheet-kicker">GUEST BOOK</p>
+            <h2 class="sheet-title" id="boardTitle">留言板</h2>
+          </div>
+          <button class="close-btn" type="button" data-close-board aria-label="关闭留言板">✕</button>
+        </header>
+
+        <p class="sheet-sub">写下想对 Z 和 Skyrain 说的话</p>
+        <p class="board-mode" id="boardMode"><span class="mode-dot"></span><span id="boardModeText">正在连接云端…</span></p>
+
+        <form class="msg-form" id="msgForm" novalidate>
+          <label class="field">
+            <span class="field-label">你的名字</span>
+            <input id="msgName" name="name" type="text" maxlength="24" autocomplete="nickname" placeholder="怎么称呼你？" required>
+          </label>
+          <label class="field">
+            <span class="field-label">留言内容</span>
+            <textarea id="msgContent" name="content" rows="3" maxlength="240" placeholder="写点什么吧……" required></textarea>
+          </label>
+          <p class="form-error" id="formError" role="alert"></p>
+          <div class="form-foot">
+            <span class="char-count" id="charCount">0 / 120</span>
+            <button class="send-btn" id="sendBtn" type="submit">寄 出</button>
+          </div>
+          <p class="board-status" id="boardStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="board-list-head">
+          <span>大家的留言</span>
+          <span class="msg-count" id="msgCount">—</span>
+        </div>
+
+        <ul class="msg-list" id="msgList" aria-live="polite"></ul>
+
+        <p class="board-note" id="boardNote">留言会保存在云端，所有拿到链接的朋友都能看到。请温柔一点 ♥</p>
+      </section>
+    </div>
+
+    <!-- ================= 彩蛋：诗信 ================= -->
+    <div class="modal" id="letterModal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <button class="close-btn modal-close" type="button" data-close-modal aria-label="关闭">✕</button>
+        <p class="sheet-kicker">EASTER EGG · 01</p>
+        <h2 class="modal-title" id="letterTitle">Z 手里的诗信</h2>
+        <div class="letter-frame">
+          <img src="assets/img/letter.webp" alt="手写的诗信，抬头写着“给卓”，日期是 2026.5.20" loading="lazy">
+        </div>
+        <p class="modal-caption">信纸的抬头写着「给卓」，落款日期是 2026.5.20。<br>Z 一直都把它带在身上。</p>
+      </div>
+    </div>
+
+    <!-- ================= 彩蛋：桃花剑 ================= -->
+    <div class="modal" id="swordModal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="swordTitle">
+        <button class="close-btn modal-close" type="button" data-close-modal aria-label="关闭">✕</button>
+        <p class="sheet-kicker">EASTER EGG · 02</p>
+        <h2 class="modal-title" id="swordTitle">扭扭棒桃花剑</h2>
+        <div class="sword-frame">
+          <img src="assets/img/sword.webp" alt="一把用扭扭棒做的桃花剑，粉色花朵和绿色叶片" loading="lazy">
+        </div>
+        <p class="modal-caption">Skyrain 用扭扭棒一圈一圈扭出来的桃花剑。<br>剑穗是粉色的，据说只用来斩不开心。</p>
+      </div>
+    </div>
+
+    <!-- ================= 访问口令（可选） ================= -->
+    <div class="lock" id="lockScreen" hidden>
+      <div class="lock-inner">
+        <div class="lock-card">
+          <p class="sheet-kicker">PRIVATE GARDEN</p>
+          <h2 class="lock-title">这是只给朋友看的小站</h2>
+          <p class="lock-sub">输入口令，推门进来吧</p>
+          <form id="lockForm">
+            <input id="lockInput" type="password" inputmode="text" autocomplete="current-password" placeholder="访问口令" aria-label="访问口令" required>
+            <button class="send-btn lock-btn" type="submit">进 入</button>
+          </form>
+          <p class="lock-error" id="lockError" role="alert"></p>
+          <p class="lock-hint">口令可以问 Z 要 :)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript><p class="noscript">这个页面需要开启 JavaScript 才能进入哦。</p></noscript>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/audio.js" defer></script>
+  <script src="assets/js/board.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
