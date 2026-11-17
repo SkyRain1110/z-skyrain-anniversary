@@ -1223,6 +1223,10 @@ ul {
   background: #e0a24a;
 }
 
+.board-mode.is-static .mode-dot {
+  background: #e0a24a;
+}
+
 .board-mode.is-loading .mode-dot {
   background: #9aa0a6;
   animation: blink 1s steps(2) infinite;

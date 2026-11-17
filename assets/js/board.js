@@ -43,6 +43,11 @@
     ["localhost", "127.0.0.1", "::1", ""].indexOf(location.hostname) !== -1 ||
     location.protocol === "file:";
 
+  // GitHub Pages 是纯静态托管，不能运行 Pages Functions。
+  // 直接进入本机留言模式，避免请求 /api/messages 时长时间等待。
+  var isStaticHost =
+    /\.github\.io$/i.test(location.hostname) || CFG.staticOnly === true;
+
   function countChars(str) {
     return Array.from(String(str || "")).length;
   }
@@ -242,6 +247,10 @@
     } else if (kind === "cloud") {
       els.modeText.textContent = "云端同步 · 所有人都能看到";
       els.note.textContent = "留言会保存在云端，所有拿到链接的朋友都能看到。请温柔一点 ♥";
+    } else if (kind === "static") {
+      els.modeText.textContent = "GitHub Pages · 留言只保存在本机";
+      els.note.textContent =
+        "GitHub Pages 只能托管静态文件，留言保存在当前浏览器；需要所有人共享时，按 README 接 Cloudflare Pages + D1。";
     } else {
       els.modeText.textContent = isLocalPreview
         ? "本地预览 · 留言只保存在这台设备"
@@ -256,6 +265,13 @@
 
   async function load() {
     if (loading) return;
+    if (isStaticHost) {
+      loaded = true;
+      messages = normalize(readLocal());
+      setMode("static");
+      renderMessages();
+      return;
+    }
     loading = true;
     setMode("loading");
     renderMessages();

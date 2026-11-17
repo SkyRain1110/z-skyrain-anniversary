@@ -72,7 +72,7 @@ preview/                     本地预览截图（不进入 GitHub 仓库）
 - 仓库：<https://github.com/SkyRain1110/z-skyrain-anniversary>
 - 站点：<https://skyrain1110.github.io/z-skyrain-anniversary/>
 - 纯静态托管：页面、三个场景、彩蛋、音效、天数统计都正常。
-- **共享留言板**：GitHub Pages 不能执行 `functions/`，所以朋友们的留言只会保存在各自浏览器里。需要云端共享时，按下面的 Cloudflare Pages + D1 方案部署一次；仓库里已经保留好 `functions/`、`schema.sql`、`wrangler.toml`。
+- **共享留言板**：GitHub Pages 不能执行 `functions/`，所以朋友们的留言只会保存在各自浏览器里。GitHub Pages 下留言板会自动进入「本机留言」模式，不请求 `/api/messages`，不会卡在“正在连接云端”。需要云端共享时，按下面的 Cloudflare Pages + D1 方案部署一次；仓库里已经保留好 `functions/`、`schema.sql`、`wrangler.toml`。
 - 更新方式：改完后重新推送 `main`（或重新上传文件），Pages 会自动重新构建。
 
 ### Cloudflare Pages（带共享留言板）
@@ -165,6 +165,7 @@ window.SITE_CONFIG = {
   accessCode: "",          // 例如 "1118" 就会在打开时要求输入口令；留空 = 不开启
   apiBase: "/api/messages",
   dialogueSeconds: 10,     // 每组对话框停留秒数
+  staticOnly: false,       // GitHub Pages 绑定自定义域名时设为 true（跳过云端接口）
 };
 ```
 

@@ -13,4 +13,6 @@ window.SITE_CONFIG = {
   accessCode: "",
   apiBase: "/api/messages",
   dialogueSeconds: 10,
+  // GitHub Pages 绑定自定义域名时设为 true，跳过云端接口、直接用本机留言
+  staticOnly: false,
 };
